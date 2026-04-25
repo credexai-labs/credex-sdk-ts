@@ -1,0 +1,33 @@
+{
+  "name": "@credex-ai/sdk",
+  "version": "0.1.0",
+  "description": "Official TypeScript SDK for the CredEx AI Exchange — the financial exchange for AI compute on XRPL",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["credex", "ai", "exchange", "xrpl", "sdk", "x402", "agents", "typescript"],
+  "author": "CredEx AI <dev@credexai.live>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/credexai-labs/credex-sdk-ts"
+  },
+  "homepage": "https://credexai.live",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.3.0"
+  }
+}
