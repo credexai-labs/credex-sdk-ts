@@ -4,7 +4,7 @@
 
 import { CredExClient } from '../src';
 
-const client = new CredExClient({ apiKey: 'your-api-key' });
+const client = new CredExClient({ apiKey: process.env.CREDEX_API_KEY });
 
 // Stream order book updates for OpenAI credits
 const stream = client.exchange.streamOrderbook('openai');

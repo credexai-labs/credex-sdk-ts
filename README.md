@@ -22,7 +22,7 @@ pnpm add @credex-ai/sdk
 ```typescript
 import { CredExClient } from '@credex-ai/sdk';
 
-const client = new CredExClient({ apiKey: 'your-api-key' });
+const client = new CredExClient({ apiKey: process.env.CREDEX_API_KEY });
 
 // ── Exchange ──────────────────────────────────────
 const orderbook = await client.exchange.getOrderbook('openai');
@@ -100,7 +100,7 @@ jobStream.on('complete', (result) => console.log(result.data));
 
 ```typescript
 // Option 1: API key
-const client = new CredExClient({ apiKey: 'your-api-key' });
+const client = new CredExClient({ apiKey: process.env.CREDEX_API_KEY });
 
 // Option 2: Environment variable (CREDEX_API_KEY)
 const client = new CredExClient();

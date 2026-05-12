@@ -5,7 +5,7 @@
 import { CredExClient } from '../src';
 
 async function main() {
-  const client = new CredExClient({ apiKey: 'your-api-key' });
+  const client = new CredExClient({ apiKey: process.env.CREDEX_API_KEY });
 
   // Get the live order book for OpenAI credits
   const orderbook = await client.exchange.getOrderbook('openai');
